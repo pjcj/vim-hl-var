@@ -34,7 +34,7 @@ function! s:vawa()
     let s:temp          = getpos('.')
     let s:current_col   = s:temp[2]
     let s:current_line  = s:temp[1]
-    let s:temp          = searchpos('[>$@%*&]','bcn')
+    let s:temp          = searchpos('[>$@%*&]','bcnW')
     let s:sigil_line    = s:temp[0]
     let s:sigil_col     = s:temp[1]
     if(s:sigil_line != s:current_line)
