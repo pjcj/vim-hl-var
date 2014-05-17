@@ -52,8 +52,8 @@ function! s:vawa()
         return
     endif
 
-    if (exists("g:vawahl"))
-        exe "highlight VarHl  " . g:vawahl
+    if (exists("g:hlvarhl"))
+        exe "highlight VarHl  " . g:hlvarhl
     else
         highlight VarHl  ctermbg=black ctermfg=red guifg=#ff0000 guibg=#000000 ctermfg=LightRed gui=bold
     endif
@@ -64,7 +64,7 @@ function! s:vawa()
         return
     endif
 
-    if (exists("g:vawanohlcurrent") && g:vawanohlcurrent == 1)
+    if (exists("g:hlvarcurrent") && g:hlvarcurrent == 1)
         let s:lineab = s:current_line - 1
         let s:linebe = s:current_line + 1
         let s:colbf  = s:sigil_col + 1
