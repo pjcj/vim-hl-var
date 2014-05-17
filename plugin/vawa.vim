@@ -27,7 +27,10 @@
 " SOFTWARE.
 
 function! s:vawa()
-    call clearmatches()
+    if (exists("s:current_match"))
+        call matchdelete(s:current_match)
+        unlet s:current_match
+    endif
     let s:temp          = getpos('.')
     let s:current_col   = s:temp[2]
     let s:current_line  = s:temp[1]
@@ -68,9 +71,9 @@ function! s:vawa()
     endif
     if(strpart(s:str,0,1) == '>')
         let s:str = strpart(s:str ,1)
-        call matchadd('VarHl', s:prefix.'>\@<='. s:str.'\n\{-\}\(\([^a-zA-Z0-9_\x7f-\xff]\)\|$\)\@=')
+        let s:current_match = matchadd('VarHl', s:prefix.'>\@<='. s:str.'\n\{-\}\(\([^a-zA-Z0-9_\x7f-\xff]\)\|$\)\@=')
     else
-        call matchadd('VarHl', s:prefix.s:str.'\n\{-\}\(\([^a-zA-Z0-9_\x7f-\xff]\)\|$\)\@=')
+        let s:current_match = matchadd('VarHl', s:prefix.s:str.'\n\{-\}\(\([^a-zA-Z0-9_\x7f-\xff]\)\|$\)\@=')
     endif
 endfunction
 if(!exists("g:vawanoauto") || (g:vawanoauto == 1))
