@@ -31,6 +31,12 @@ it by setting variable *g:hlvarcurrent* to 1.
 
 ## Licence
 
-This code is released under the MIT licence, as is Sandeep's original code.
-Forked from Sandeep's [repository](https://bitbucket.org/sras/vawa), with his
-blessing.
+This code is released under the MIT licence, as is Sandeep's original code.  See
+*hl-var.vim* for the full licence.
+
+## Authors
+
+This version was forked from Sandeep's
+[repository](https://bitbucket.org/sras/vawa), with his blessing.  Curtis "Ovid"
+Poe hacked it to support Perl.  It is currently being maintained by Paul
+Johnson.
