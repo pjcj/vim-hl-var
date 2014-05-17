@@ -24,7 +24,7 @@
 " OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 " SOFTWARE.
 
-function! s:vawa()
+function! s:hlvar()
     if (exists("s:current_match"))
         call matchdelete(s:current_match)
         unlet s:current_match
@@ -78,16 +78,16 @@ function! s:vawa()
     let s:current_match = matchadd('VarHl', s:match)
 endfunction
 
-if (!exists("g:vawanoauto") || g:vawanoauto == 1)
+if (!exists("g:hlvarnoauto") || g:hlvarnoauto == 1)
     augroup HighlightVar
         autocmd!
-        au CursorHold  *.pl call <sid>vawa()
-        au CursorHoldi *.pl call <sid>vawa()
-        au CursorHold  *.pm call <sid>vawa()
-        au CursorHoldi *.pm call <sid>vawa()
-        au CursorHold  *.t  call <sid>vawa()
-        au CursorHoldi *.t  call <sid>vawa()
+        au CursorHold  *.pl call <sid>hlvar()
+        au CursorHoldi *.pl call <sid>hlvar()
+        au CursorHold  *.pm call <sid>hlvar()
+        au CursorHoldi *.pm call <sid>hlvar()
+        au CursorHold  *.t  call <sid>hlvar()
+        au CursorHoldi *.t  call <sid>hlvar()
     augroup END
 endif
 
-command! Vawa :call <sid>vawa()
+command! HlVar :call <sid>hlvar()
