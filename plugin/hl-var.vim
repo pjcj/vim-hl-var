@@ -1,10 +1,8 @@
-" Drop this into .vim/plugin.vawa.vim
-" if you already have vawa.vim, rename appropriately
-" automatically highlights variables under cursor, allowing you to easily see the data flow.
-
-" Vawa Plugin for VIM > 7.3 version 1.00
-" Maintainer:  Sandeep.c.r<sandeepcr2@gmail.com>
-" Hacked for Perl by Curtis "Ovid" Poe <ovid@allaroundtheworld.fr>
+" Vim plugin to highlight variables in Perl.
+"
+" Original author:    Sandeep.c.r <sandeepcr2@gmail.com>
+" Hacked for Perl by: Curtis "Ovid" Poe <ovid@allaroundtheworld.fr>
+" Current maintainer: Paul Johnson <paul@pjcj.net>
 "
 " Copyright (c) 2014 Sandeep.C.R <sandeepcr2@gmail.com>
 "
