@@ -5,6 +5,8 @@ cursor.  It is a fork of Sandeep.c.r's plugin to do the same for PHP.
 
 ![Imgur](https://i.imgur.com/yBnFrby.gif)
 
+(Image credit: [Ovid](https://github.com/ovid))
+
 Perl variables, of all types, will be highlighted, as will methods.
 
 ## Installation
