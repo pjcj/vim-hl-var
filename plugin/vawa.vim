@@ -47,7 +47,7 @@ function! s:vawa()
         return
     endif
     if(s:varend == 0)
-        let s:varend = strlen(s:temp[0])+1
+        return
     endif
     let s:current_char = s:temp[0][s:current_col-1]
     if(s:current_char == '>' || s:current_char == '-')
