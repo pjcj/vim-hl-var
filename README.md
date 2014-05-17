@@ -3,9 +3,7 @@
 This Vim plugin will highlight all instances of the Perl variable under the
 cursor.  It is a fork of Sandeep.c.r's plugin to do the same for PHP.
 
-![Imgur](http://i.imgur.com/f9N2asZ.gif)
-
-(This is from Sandeep's README, I am too lazy to redo it with Perl code.)
+![Imgur](https://i.imgur.com/yBnFrby.gif)
 
 Perl variables, of all types, will be highlighted, as will methods.
 
