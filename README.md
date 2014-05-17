@@ -19,6 +19,15 @@ Requires Vim version 7.3 or later.
 
 ## Configuration
 
+The variables will be highlighted after you have not performed any action for a
+certain length of time.  That time is controlled by the *uptimetime* setting.
+(See `:help updatetime`.) The default value is 4000, which is four seconds.
+That value is too large for this plugin, so I recommend adjusting it to 500,
+which is half a second.  You can experiment with the value which works best for
+you.
+
+`set updatetime=500`
+
 You can customise the highlighting applied by this plugin by using the *hlvarhl*
 global variable. This can be set in your *.vimrc* file:
 
