@@ -79,12 +79,12 @@ endfunction
 if(!exists("g:vawanoauto") || (g:vawanoauto == 1))
     augroup HighlightVar
             autocmd!
-            au CursorMoved  *.pl call <sid>vawa()
-            au CursorMovedi *.pl call <sid>vawa()
-            au CursorMoved  *.pm call <sid>vawa()
-            au CursorMovedi *.pm call <sid>vawa()
-            au CursorMoved  *.t  call <sid>vawa()
-            au CursorMovedi *.t  call <sid>vawa()
+            au CursorHold  *.pl call <sid>vawa()
+            au CursorHoldi *.pl call <sid>vawa()
+            au CursorHold  *.pm call <sid>vawa()
+            au CursorHoldi *.pm call <sid>vawa()
+            au CursorHold  *.t  call <sid>vawa()
+            au CursorHoldi *.t  call <sid>vawa()
     augroup END
 endif
 
