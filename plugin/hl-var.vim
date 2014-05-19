@@ -75,8 +75,8 @@ endfunction
 if (!exists("g:hlvarnoauto") || g:hlvarnoauto == 1)
     augroup HighlightVar
         autocmd!
-        au FileType perl :au CursorMoved  * call <sid>hlvar()
-        au FileType perl :au CursorMovedi * call <sid>hlvar()
+        au FileType perl :au CursorHold  * call <sid>hlvar()
+        au FileType perl :au CursorHoldi * call <sid>hlvar()
         au CursorHold  *.pl call <sid>hlvar()
         au CursorHoldi *.pl call <sid>hlvar()
         au CursorHold  *.pm call <sid>hlvar()
