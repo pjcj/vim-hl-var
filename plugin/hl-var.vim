@@ -25,9 +25,9 @@
 " SOFTWARE.
 
 function! s:hlvar()
-    if (exists("s:current_match"))
-        call matchdelete(s:current_match)
-        unlet s:current_match
+    if (exists("w:current_match"))
+        call matchdelete(w:current_match)
+        unlet w:current_match
     endif
 
     let s:temp         = getpos('.')
@@ -75,7 +75,7 @@ function! s:hlvar()
         let s:match = s:match . '>\@<='
     endif
     let s:match = s:match . s:str . '\n\{-\}\(\([^a-zA-Z0-9_\x7f-\xff]\)\|$\)\@='
-    let s:current_match = matchadd('VarHl', s:match)
+    let w:current_match = matchadd('VarHl', s:match)
 endfunction
 
 if (!exists("g:hlvarnoauto") || g:hlvarnoauto == 1)
