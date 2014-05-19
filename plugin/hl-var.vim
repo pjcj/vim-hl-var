@@ -50,12 +50,6 @@ function! s:hlvar()
         return
     endif
 
-    if (exists("g:hlvarhl"))
-        exe "highlight VarHl  " . g:hlvarhl
-    else
-        highlight VarHl  ctermbg=black ctermfg=red guifg=#ff0000 guibg=#000000 ctermfg=LightRed gui=bold
-    endif
-
     let s:str = strpart(s:temp[0], s:sigil_col - 1, s:varend - s:sigil_col)
     let s:prefix = ''
     if (s:str == '$' || s:str == '&' || s:str == '*')
@@ -90,6 +84,11 @@ if (!exists("g:hlvarnoauto") || g:hlvarnoauto == 1)
         au CursorHold  *.t  call <sid>hlvar()
         au CursorHoldi *.t  call <sid>hlvar()
     augroup END
+    if (exists("g:hlvarhl"))
+        exe "highlight VarHl  " . g:hlvarhl
+    else
+        highlight VarHl ctermbg=black guifg=#ff0000 guibg=#000000 ctermfg=LightRed gui=bold
+    endif
 endif
 
 command! HlVar :call <sid>hlvar()
