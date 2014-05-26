@@ -67,6 +67,8 @@ function! s:hlvar()
     if (strpart(s:str, 0, 1) == '>')
         let s:str = strpart(s:str, 1)
         let s:match = s:match . '>\@<='
+    else
+        let s:str = substitute( s:str, '^[$@%]', '[$@%]', '' )
     endif
     let s:match = s:match . s:str . '\n\{-\}\(\([^a-zA-Z0-9_\x7f-\xff]\)\|$\)\@='
     let w:current_match = matchadd('VarHl', s:match)
